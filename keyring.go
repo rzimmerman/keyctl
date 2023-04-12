@@ -19,7 +19,9 @@ type Id interface {
 type Keyring interface {
 	Id
 	Add(string, []byte) (*Key, error)
+	AddType(string, string, []byte) (*Key, error)
 	Search(string) (*Key, error)
+	SearchType(string, string) (*Key, error)
 	SetDefaultTimeout(uint)
 }
 
