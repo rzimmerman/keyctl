@@ -59,7 +59,7 @@ func getInfo(id keyId) (i Info, err error) {
 		i.Uid, _ = strconv.Atoi(string(fields[1]))
 		fallthrough
 	case 1:
-		if i.Type = string(fields[0]); i.Type == "user" {
+		if i.Type = string(fields[0]); i.Type == "user" || i.Type == "logon" {
 			i.Type = "key"
 		}
 		i.valid = true
